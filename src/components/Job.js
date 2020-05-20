@@ -13,9 +13,9 @@ const Job = ({job, handleTablet}) => {
       {job.new && <span class="pin new">NEW!</span>}
       {job.featured && <span class="pin feature">FEATURED</span>}
     <h2>{job.position}</h2>
-    <p>{job.postedAt} - {job.contract} - {job.location}</p>
+    <p>{job.postedAt} <span>&bull;</span> {job.contract} <span>&bull;</span> {job.location}</p>
     </div>
-    <div>
+    <div className="tablet-container">
       <span className="tablet" onClick={() => handleTablet({role: job.role})}>{job.role}</span>
       <span className="tablet" onClick={() => handleTablet({level: job.level})}>{job.level}</span>
       {job.languages && job.languages.map( language => 

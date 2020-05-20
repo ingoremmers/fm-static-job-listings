@@ -77,7 +77,6 @@ function App() {
 
   return (
     <div className="App">
-      <header></header>
       <JobFilter filter={jobFilter} removeFilter={removeFilter} />
       <Jobs jobs={filteredJobs} handleTablet={handleTablet} />
     </div>
