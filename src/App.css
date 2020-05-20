@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Spartan', sans-serif;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+header {
+  background-color: hsl(180, 29%, 50%);
+  background-image: url(/images/bg-header-desktop.svg);
+  height: 150px
+}
+body {
+  background-color: hsl(180, 52%, 96%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.job-filter {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}
+.job-filter span {
+  padding: 0 0 0 10px;
+  margin: 10px;
+  
+}
+.job-filter span:hover {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.job-filter button{
+  float:right;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  padding: 15px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.job-filter button:hover {
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.close {
+  background-color: hsl(180, 29%, 50%);
+  padding: 10px;
+  margin-left: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  vertical-align: middle;
+
 }
 
-.App-link {
-  color: #61dafb;
+.close:hover {
+  background-color: hsl(180, 14%, 20%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  background-color: white;
+  width: 80%;
+  margin: 25px auto;
+  border-radius: 5px;
+  box-shadow:0px 5px  10px hsl(180, 29%, 80%);
+  padding: 10px;
+
+}
+
+.jobs{
+  margin-top: 70px;
+}
+.job {
+  
+  border-left: 5px solid hsl(180, 29%, 50%);
+  grid-template-columns: 128px 1fr 1fr;
+  display: grid;
+}
+
+.job h2 {
+  cursor: pointer;
+}
+.job h2:hover {
+  color: hsl(180, 29%, 50%);
+}
+
+.job img {
+  padding: 20px;
+}
+
+.tablet {
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  padding: 10px;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+tablet:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
+}
+
+.pin {
+  color: hsl(180, 31%, 95%);
+  border-radius: 10em;
+  font-size: 0.7em;
+  padding: 0.7em;
+  cursor: auto;
+  margin: 6px;
+  font-weight: 700;
+
+}
+.feature:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+.new {
+  background-color:hsl(180, 29%, 50%);
+}
+
+.feature {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.company {
+  color: hsl(180, 29%, 50%);
+  background: none;
+  font-weight: 700;
+  font-size: 1em;
 }
