@@ -50,6 +50,8 @@ function App() {
         ? jobFilter.languages.includes(value.language)
           ? { languages: jobFilter.languages }
           : { languages: [...jobFilter.languages, value.language] }
+        : jobFilter.tools.includes(value.tool)
+        ? { tools: jobFilter.tools }
         : { tools: [...jobFilter.tools, value.tool] }
     } else {
       filterToAdd = value
@@ -73,7 +75,7 @@ function App() {
           .filter((job) => jobFilter.tools.length === 0 || 
             jobFilter.tools.every(t => job.tools && job.tools.includes(t)))
     )
-  }, [jobFilter])
+  }, [jobs, jobFilter])
 
   return (
     <div className="App">

@@ -10,8 +10,8 @@ const Job = ({job, handleTablet}) => {
       <img src={job.logo} alt={job.company}/>
       <div>
       <span className="company">{job.company} </span>
-      {job.new && <span class="pin new">NEW!</span>}
-      {job.featured && <span class="pin feature">FEATURED</span>}
+      {job.new && <span className="pin new">NEW!</span>}
+      {job.featured && <span className="pin feature">FEATURED</span>}
     <h2>{job.position}</h2>
     <p>{job.postedAt} <span>&bull;</span> {job.contract} <span>&bull;</span> {job.location}</p>
     </div>
@@ -20,8 +20,12 @@ const Job = ({job, handleTablet}) => {
       <span className="tablet" onClick={() => handleTablet({level: job.level})}>{job.level}</span>
       {job.languages && job.languages.map( language => 
         
-      <span className="tablet" onClick={() => handleTablet({language: language})}>{language}</span>
+      <span key ={language} className="tablet" onClick={() => handleTablet({language: language})}>{language}</span>
       )}
+      {job.tools && job.tools.map( tool => 
+        
+        <span key ={tool} className="tablet" onClick={() => handleTablet({tool: tool})}>{tool}</span>
+        )}
     </div>
     </div>
   )

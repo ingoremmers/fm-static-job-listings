@@ -16,7 +16,7 @@ const JobFilter = ({filter, removeFilter}) => {
        <span className="tablet" key={language}> {language}  <img onClick={() => removeFilter('language', language)} className="close" src="/images/icon-remove.svg" alt="close"/></span>
       )}
       {filter.tools.map((tool) => 
-       <span className="tablet" key="{tool}" >{tool}  <img onClick={() => removeFilter('tool', tool)} className="close" src="/images/icon-remove.svg" alt="close"/></span>
+       <span className="tablet" key={tool} >{tool}  <img onClick={() => removeFilter('tool', tool)} className="close" src="/images/icon-remove.svg" alt="close"/></span>
       )}
       
       <button onClick={() => removeFilter('clear')}> Clear</button>
