@@ -79,6 +79,7 @@ function App() {
 
   return (
     <div className="App">
+
       <JobFilter filter={jobFilter} removeFilter={removeFilter} />
       <Jobs jobs={filteredJobs} handleTablet={handleTablet} />
     </div>
