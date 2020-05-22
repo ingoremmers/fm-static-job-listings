@@ -91,7 +91,7 @@ body {
 }
 .job {
   border-left: 5px solid hsl(180, 29%, 50%);
-  grid-template-columns: 128px 1fr 1fr;
+  grid-template-columns: 128px 2fr 3fr;
   display: grid;
 }
 
@@ -117,8 +117,11 @@ body {
 .job img {
   padding: 20px;
 }
-.job .tablet {
-  float: right;
+
+
+.tablet-container {
+  display:block;
+  text-align: right;
 }
 
 
